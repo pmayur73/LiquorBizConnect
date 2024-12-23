@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/HelpWithLiquorBizCT/static/css/main.af4068f1.css",
-    "main.js": "/HelpWithLiquorBizCT/static/js/main.99df7628.js",
-    "static/js/488.ad4972bb.chunk.js": "/HelpWithLiquorBizCT/static/js/488.ad4972bb.chunk.js",
-    "index.html": "/HelpWithLiquorBizCT/index.html",
-    "main.af4068f1.css.map": "/HelpWithLiquorBizCT/static/css/main.af4068f1.css.map",
-    "main.99df7628.js.map": "/HelpWithLiquorBizCT/static/js/main.99df7628.js.map",
-    "488.ad4972bb.chunk.js.map": "/HelpWithLiquorBizCT/static/js/488.ad4972bb.chunk.js.map"
+    "main.css": "/LiquorBizConnect/static/css/main.af4068f1.css",
+    "main.js": "/LiquorBizConnect/static/js/main.83e2b416.js",
+    "static/js/488.ad4972bb.chunk.js": "/LiquorBizConnect/static/js/488.ad4972bb.chunk.js",
+    "index.html": "/LiquorBizConnect/index.html",
+    "main.af4068f1.css.map": "/LiquorBizConnect/static/css/main.af4068f1.css.map",
+    "main.83e2b416.js.map": "/LiquorBizConnect/static/js/main.83e2b416.js.map",
+    "488.ad4972bb.chunk.js.map": "/LiquorBizConnect/static/js/488.ad4972bb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.af4068f1.css",
-    "static/js/main.99df7628.js"
+    "static/js/main.83e2b416.js"
   ]
 }
