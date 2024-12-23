@@ -1,3 +1,4 @@
+// src/components/LiquorStores/LiquorStoresPage.jsx
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import {
   Container,
@@ -41,11 +42,13 @@ function LiquorStoresPage() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [expandedTowns, setExpandedTowns] = useState({});
+  const [maxLicensesByTown, setMaxLicensesByTown] = useState({}); // New state for max licenses
 
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
 
   useEffect(() => {
     fetchData();
+    fetchMaxLicenses();
   }, []);
 
   const fetchData = async () => {
@@ -67,6 +70,20 @@ function LiquorStoresPage() {
       groupByTown(sortedData);
     } catch (error) {
       console.error('Error fetching data:', error);
+    }
+  };
+
+  // Fetch max licenses allowed per town
+  const fetchMaxLicenses = async () => {
+    try {
+      const response = await axios.get('https://data.ct.gov/api/id/fiq7-t34m.json');
+      const maxLicensesData = response.data.reduce((acc, item) => {
+        acc[item.town] = item.max_stores_allowed;
+        return acc;
+      }, {});
+      setMaxLicensesByTown(maxLicensesData);
+    } catch (error) {
+      console.error('Error fetching max licenses:', error);
     }
   };
 
@@ -133,13 +150,14 @@ function LiquorStoresPage() {
   const memoizedLiquorStoreTable = useMemo(() => (
     <LiquorStoreTable 
       groupedBusinesses={groupedBusinesses}
+      maxLicensesByTown={maxLicensesByTown}
       page={page}
       rowsPerPage={rowsPerPage}
       onPageChange={handleChangePage}
       onRowsPerPageChange={handleChangeRowsPerPage}
       totalCount={Object.values(groupedBusinesses).reduce((sum, arr) => sum + arr.length, 0)}
     />
-  ), [groupedBusinesses, expandedTowns, page, rowsPerPage]);
+  ), [groupedBusinesses, maxLicensesByTown, expandedTowns, page, rowsPerPage]);
 
   const memoizedTownOptions = useMemo(() =>
     towns.map((town) => (
