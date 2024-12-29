@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/LiquorBizConnect/static/css/main.af4068f1.css",
-    "main.js": "/LiquorBizConnect/static/js/main.1b6589dc.js",
+    "main.css": "/LiquorBizConnect/static/css/main.67c8beb9.css",
+    "main.js": "/LiquorBizConnect/static/js/main.f74a428f.js",
     "static/js/488.e3c7d324.chunk.js": "/LiquorBizConnect/static/js/488.e3c7d324.chunk.js",
     "index.html": "/LiquorBizConnect/index.html",
-    "main.af4068f1.css.map": "/LiquorBizConnect/static/css/main.af4068f1.css.map",
-    "main.1b6589dc.js.map": "/LiquorBizConnect/static/js/main.1b6589dc.js.map",
+    "main.67c8beb9.css.map": "/LiquorBizConnect/static/css/main.67c8beb9.css.map",
+    "main.f74a428f.js.map": "/LiquorBizConnect/static/js/main.f74a428f.js.map",
     "488.e3c7d324.chunk.js.map": "/LiquorBizConnect/static/js/488.e3c7d324.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.af4068f1.css",
-    "static/js/main.1b6589dc.js"
+    "static/css/main.67c8beb9.css",
+    "static/js/main.f74a428f.js"
   ]
 }
